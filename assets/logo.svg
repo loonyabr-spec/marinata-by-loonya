@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="600"
+     height="220"
+     viewBox="0 0 600 220">
+
+    <defs>
+
+        <linearGradient id="grad"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="0%">
+
+            <stop offset="0%"
+                  stop-color="#ff7a00"/>
+
+            <stop offset="100%"
+                  stop-color="#ff9f43"/>
+
+        </linearGradient>
+
+    </defs>
+
+    <rect
+        width="600"
+        height="220"
+        rx="28"
+        fill="#1d2026"/>
+
+    <text
+        x="300"
+        y="72"
+        text-anchor="middle"
+        fill="url(#grad)"
+        font-size="54"
+        font-family="Arial"
+        font-weight="bold">
+
+        MOWI
+
+    </text>
+
+    <line
+        x1="110"
+        y1="92"
+        x2="490"
+        y2="92"
+        stroke="#3b414d"
+        stroke-width="2"/>
+
+    <text
+        x="300"
+        y="140"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="28"
+        font-family="Arial">
+
+        Marinade Calculator PRO
+
+    </text>
+
+    <text
+        x="300"
+        y="182"
+        text-anchor="middle"
+        fill="#ff7a00"
+        font-size="22"
+        font-family="Arial">
+
+        by loonya
+
+    </text>
+
+</svg>

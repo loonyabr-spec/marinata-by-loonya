@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>MOWI Marinade Calculator PRO</title>
+
+    <meta name="theme-color" content="#16181d">
+
+    <link rel="manifest" href="manifest.json">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logoBox">
+
+            <img id="logo"
+                 src="assets/logo.svg"
+                 alt="MOWI">
+
+            <h2>Marinade Calculator PRO</h2>
+
+            <span>by loonya</span>
+
+        </div>
+
+        <nav class="menu">
+
+            <button
+                class="menuBtn active"
+                data-page="calculator">
+
+                🧮 Calculator
+
+            </button>
+
+            <button
+                class="menuBtn"
+                data-page="recipes">
+
+                📋 Recipes
+
+            </button>
+
+            <button
+                class="menuBtn"
+                data-page="history">
+
+                🕒 History
+
+            </button>
+
+            <button
+                class="menuBtn"
+                data-page="settings">
+
+                ⚙ Settings
+
+            </button>
+
+        </nav>
+
+        <div class="languageBox">
+
+            <button class="langBtn"
+                    data-lang="en">
+
+                🇬🇧
+
+            </button>
+
+            <button class="langBtn"
+                    data-lang="ua">
+
+                🇺🇦
+
+            </button>
+
+            <button class="langBtn"
+                    data-lang="pl">
+
+                🇵🇱
+
+            </button>
+
+        </div>
+
+    </aside>
+
+    <!-- CONTENT -->
+
+    <main class="content">
+
+        <!-- ======================= -->
+        <!-- CALCULATOR -->
+        <!-- ======================= -->
+
+        <section
+            id="calculatorPage"
+            class="page activePage">
+
+            <div class="card">
+
+                <h1>Calculator</h1>
+
+                <div class="field">
+
+                    <label id="fishLabel">
+
+                      <div class="card">
+
+    <h2>Production Information</h2>
+
+    <div class="field">
+
+        <label id="operatorLabel">
+
+            Operator
+
+        </label>
+
+        <input
+            type="text"
+            id="operator"
+            placeholder="Operator">
+
+    </div>
+
+    <div class="field">
+
+        <label id="orderLabel">
+
+            Order Number
+
+        </label>
+
+        <input
+            type="text"
+            id="orderNumber"
+            placeholder="541287">
+
+    </div>
+
+    <div class="field">
+
+        <label id="productBatchLabel">
+
+            Product Batch
+
+        </label>
+
+        <input
+            type="text"
+            id="productBatch"
+            placeholder="LS240701015">
+
+    </div>
+
+</div>
+                        Fish weight (kg)
+
+                    </label>
+
+                    <input
+                        id="fishWeight"
+                        type="number"
+                        min="0"
+                        step="0.1">
+
+                </div>
+
+                <div class="field">
+
+                    <label id="batchLabel">
+
+                        Number of batches
+
+                    </label>
+
+                    <input
+                        id="batchCount"
+                        type="number"
+                        min="1"
+                        value="1">
+
+                </div>
+
+                <div class="field">
+
+                    <label id="cupLabel">
+
+                        Cup size (L)
+                        <div class="card">
+
+    <h2>Ingredient Batch Numbers</h2>
+
+    <div class="field">
+        <label>Salt Lot</label>
+        <input id="lotSalt" type="text">
+    </div>
+
+    <div class="field">
+        <label>Sugar Lot</label>
+        <input id="lotSugar" type="text">
+    </div>
+
+    <div class="field">
+        <label>Soy Sauce Lot</label>
+        <input id="lotSoy" type="text">
+    </div>
+
+    <div class="field">
+        <label>Sesame Oil Lot</label>
+        <input id="lotOil" type="text">
+    </div>
+
+    <div class="field">
+        <label>White Sesame Lot</label>
+        <input id="lotSesame" type="text">
+    </div>
+
+    <div class="field">
+        <label>Sweet Chili Lot</label>
+        <input id="lotChili" type="text">
+    </div>
+
+    <div class="field">
+        <label>Concentrate Lot</label>
+        <input id="lotConc" type="text">
+    </div>
+
+</div>
+
+                    </label>
+
+                    <select id="cupSize">
+
+                        <option value="2">
+
+                            2 L
+
+                        </option>
+
+                        <option value="5">
+
+                            5 L
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <h2>Ingredients</h2>
+
+               <table id="ingredientTable">
+
+    <thead>
+
+        <tr>
+
+            <th>Ingredient</th>
+
+            <th>Amount</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody id="ingredients">
+
+    </tbody>
+
+</table>
+
+            </div>
+
+            <div class="card">
+
+                <h2>Batches</h2>
+
+                <div id="batches">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ======================= -->
+        <!-- RECIPES -->
+        <!-- ======================= -->
+
+        <section
+            id="recipesPage"
+            class="page">
+
+            <div class="card">
+
+                <h1>Recipes</h1>
+
+                <p>Coming soon...</p>
+
+            </div>
+
+        </section>
+
+        <!-- ======================= -->
+        <!-- HISTORY -->
+        <!-- ======================= -->
+
+        <section
+            id="historyPage"
+            class="page">
+
+            <div class="card">
+
+                <h1>History</h1>
+
+                <div id="historyList">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ======================= -->
+        <!-- SETTINGS -->
+        <!-- ======================= -->
+
+        <section
+            id="settingsPage"
+            class="page">
+
+            <div class="card">
+
+                <h1>Settings</h1>
+
+                <button id="themeButton">
+
+                    Toggle Theme
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="data/translations.js"></script>
+
+<script src="data/recipes.js"></script>
+
+<script src="js/calculator.js"></script>
+
+<button id="saveBatchButton">
+
+💾 Save Batch
+<button id="exportCSVButton">
+
+📊 Export CSV
+
+</button>
+
+</button>
+
+<script src="js/dashboard.js"></script>
+
+<script src="js/history.js"></script>
+
+<script src="js/recipes.js"></script>
+
+<script src="js/settings.js"></script>
+
+<script src="js/language.js"></script>
+
+<script src="js/storage.js"></script>
+
+<script src="js/batchList.js"></script>
+
+<script src="js/export.js"></script>
+
+<script src="js/pdf.js"></script>
+<button id="exportPDFButton">
+
+📄 Export PDF
+
+</button>
+
+<script src="js/app.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,714 @@
+:root{
+    --bg:#16181d;
+    --sidebar:#1d2026;
+    --card:#242932;
+    --cardHover:#2d333d;
+
+    --text:#ffffff;
+    --text2:#c8ced8;
+
+    --accent:#ff7a00;
+
+    --border:#343943;
+
+    --green:#2ecc71;
+    --red:#ff4d4d;
+
+    --radius:18px;
+
+    --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+}
+
+button,
+input,
+select{
+
+    font-family:inherit;
+
+}
+
+.app{
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+/* ===========================
+SIDEBAR
+=========================== */
+
+.sidebar{
+
+    width:270px;
+
+    background:var(--sidebar);
+
+    border-right:1px solid var(--border);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    padding:25px;
+
+}
+
+.logoBox{
+
+    text-align:center;
+
+}
+
+.logoBox img{
+
+    width:170px;
+
+    margin-bottom:15px;
+
+}
+
+.logoBox h2{
+
+    font-size:22px;
+
+    margin-bottom:5px;
+
+}
+
+.logoBox span{
+
+    color:var(--accent);
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
+
+.menu{
+
+    margin-top:40px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.menuBtn{
+
+    background:transparent;
+
+    border:1px solid var(--border);
+
+    color:white;
+
+    padding:15px;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    text-align:left;
+
+    font-size:16px;
+
+}
+
+.menuBtn:hover{
+
+    background:var(--cardHover);
+
+}
+
+.menuBtn.active{
+
+    background:var(--accent);
+
+    border-color:var(--accent);
+
+}
+
+.languageBox{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:10px;
+
+}
+
+.langBtn{
+
+    width:55px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:var(--card);
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    transition:.2s;
+
+}
+
+.langBtn:hover{
+
+    transform:scale(1.08);
+
+}
+
+/* ===========================
+CONTENT
+=========================== */
+
+.content{
+
+    flex:1;
+
+    padding:35px;
+
+}
+
+.page{
+
+    display:none;
+
+}
+
+.activePage{
+
+    display:block;
+
+}
+
+.card{
+
+    background:var(--card);
+
+    border-radius:var(--radius);
+
+    padding:25px;
+
+    margin-bottom:25px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.card h1{
+
+    margin-bottom:20px;
+
+}
+
+.card h2{
+
+    margin-bottom:15px;
+
+}
+
+/* ===========================
+FIELDS
+=========================== */
+
+.field{
+
+    margin-bottom:18px;
+
+}
+
+.field label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:var(--text2);
+
+}
+
+.field input,
+.field select{
+
+    width:100%;
+
+    background:#2f3641;
+
+    border:1px solid var(--border);
+
+    color:white;
+
+    border-radius:12px;
+
+    padding:15px;
+
+    font-size:18px;
+
+    outline:none;
+
+}
+
+.field input:focus,
+.field select:focus{
+
+    border-color:var(--accent);
+
+}
+
+/* ===========================
+INGREDIENTS
+=========================== */
+
+.result{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:12px 0;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.result:last-child{
+
+    border:none;
+
+}
+
+.result span:last-child{
+
+    font-weight:bold;
+
+}
+
+/* ===========================
+TOTAL
+=========================== */
+
+.total{
+
+    margin-top:18px;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    background:var(--accent);
+
+    color:white;
+
+    text-align:center;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+}
+
+/* ===========================
+BATCHES
+=========================== */
+
+.batchCard{
+
+    background:#2d333d;
+
+    border-radius:15px;
+
+    padding:18px;
+
+    margin-bottom:15px;
+
+}
+
+.batchCard h3{
+
+    margin-bottom:12px;
+
+}
+
+.batchRow{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:8px;
+
+}
+
+/* ===========================
+SETTINGS
+=========================== */
+
+#themeButton{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:var(--accent);
+
+    color:white;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+}
+
+/* ===========================
+SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--accent);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#1f232b;
+
+}
+/* ===========================
+LIGHT THEME
+=========================== */
+
+body.light{
+
+    --bg:#f4f5f8;
+
+    --sidebar:#ffffff;
+
+    --card:#ffffff;
+
+    --cardHover:#ececec;
+
+    --text:#222222;
+
+    --text2:#666666;
+
+    --border:#d8d8d8;
+
+    color:var(--text);
+
+}
+
+body.light .menuBtn{
+
+    color:#222;
+
+}
+
+body.light .field input,
+body.light .field select{
+
+    background:#ffffff;
+
+    color:#222;
+
+}
+
+body.light .batchCard{
+
+    background:#f3f3f3;
+
+}
+
+body.light .langBtn{
+
+    background:#ffffff;
+
+    border:1px solid #ddd;
+
+}
+
+body.light #themeButton{
+
+    color:#fff;
+
+}
+/* ===========================
+RECIPES
+=========================== */
+
+.recipeGrid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+gap:20px;
+
+margin-top:20px;
+
+}
+
+.recipeButton{
+
+background:var(--card);
+
+border:2px solid var(--border);
+
+border-radius:18px;
+
+padding:25px;
+
+cursor:pointer;
+
+transition:.25s;
+
+text-align:center;
+
+}
+
+.recipeButton:hover{
+
+transform:translateY(-5px);
+
+border-color:var(--accent);
+
+}
+
+.recipeIcon{
+
+font-size:55px;
+
+margin-bottom:15px;
+
+}
+
+.recipeTitle{
+
+font-size:20px;
+
+font-weight:bold;
+
+}
+
+.selectedRecipe{
+
+border-color:var(--accent);
+
+background:rgba(255,122,0,.15);
+
+box-shadow:0 0 20px rgba(255,122,0,.35);
+
+}
+/* =======================
+DASHBOARD
+======================= */
+
+.dashboard{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+gap:20px;
+
+margin-bottom:25px;
+
+}
+
+.dashCard{
+
+background:linear-gradient(145deg,#2b313b,#20252d);
+
+border-radius:18px;
+
+padding:22px;
+
+text-align:center;
+
+box-shadow:0 8px 25px rgba(0,0,0,.35);
+
+border:2px solid transparent;
+
+transition:.25s;
+
+}
+
+.dashCard:hover{
+
+transform:translateY(-5px);
+
+border-color:#ff7a00;
+
+}
+
+.dashIcon{
+
+font-size:42px;
+
+margin-bottom:12px;
+
+}
+
+.dashValue{
+
+font-size:34px;
+
+font-weight:bold;
+
+color:#ff7a00;
+
+}
+
+.dashLabel{
+
+margin-top:8px;
+
+color:#c7c7c7;
+
+font-size:16px;
+
+}
+/*==========================
+INGREDIENT TABLE
+==========================*/
+
+#ingredientTable{
+
+width:100%;
+
+border-collapse:collapse;
+
+margin-top:15px;
+
+background:var(--card);
+
+overflow:hidden;
+
+border-radius:15px;
+
+}
+
+#ingredientTable th{
+
+background:#ff7a00;
+
+color:white;
+
+padding:16px;
+
+font-size:18px;
+
+}
+
+#ingredientTable td{
+
+padding:15px;
+
+border-bottom:1px solid var(--border);
+
+font-size:17px;
+
+}
+
+#ingredientTable tr:hover{
+
+background:rgba(255,122,0,.08);
+
+}
+
+#ingredientTable td:last-child{
+
+text-align:right;
+
+font-weight:bold;
+
+}
+
+.totalRow{
+
+background:#313844;
+
+font-size:20px;
+
+font-weight:bold;
+
+}
+
+.totalRow td{
+
+padding:18px;
+
+}
+
+.warning{
+
+margin-top:18px;
+
+padding:18px;
+
+background:#ffb100;
+
+color:#000;
+
+border-radius:12px;
+
+font-weight:bold;
+
+text-align:center;
+
+font-size:18px;
+
+}
